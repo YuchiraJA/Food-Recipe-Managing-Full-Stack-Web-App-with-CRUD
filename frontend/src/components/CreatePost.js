@@ -1,13 +1,49 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 
 export default class CreatePost extends Component {
   constructor(props){
     super(props);
     this.state={
-      topic:"",
-      description:"",
-      postCategory:""
+      recipename:"",
+      ingredients:"",
+      description:""
     }
+  }
+
+  handleInputChange = (e) =>{
+    const {name,value} = e.target;
+
+    this.setState({
+      ...this.state,
+      [name]:value
+    })
+  }
+
+  onSubmit =(e) =>{
+    e.preventDefault();
+
+    const {recipename,ingredients,description} = this.state;
+
+    const data = {
+      recipename:recipename,
+      ingredients:ingredients,
+      description:description
+    }
+
+    console.log(data)
+
+    axios.post("http://localhost:8006/post/save",data).then((res) =>{
+      if(res.data.success){
+        this.setState(
+          {
+            recipename:"",
+            ingredients:"",
+            description:""
+          }
+        )
+      }
+    })
   }
 
   render() {
@@ -32,7 +68,7 @@ export default class CreatePost extends Component {
 
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
-                  <label style={{marginBottom:'5px'}}></label>
+                  <label style={{marginBottom:'5px'}}> Ingredients </label>
                   <input type="text"
                   className='form-control'
                   name='ingredients'
@@ -52,7 +88,7 @@ export default class CreatePost extends Component {
                   onChange={this.handleInputChange}/>
                 </div>
 
-                <button className='btn btn-success' type='submit'></button>
+                <button className='btn btn-success' type='submit' style={{marginTop:'15px'}} onClick={this.onSubmit}>&nbsp; Save </button>
               </form>
             </div>
         </div>
