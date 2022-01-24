@@ -44,7 +44,7 @@ retrievePosts(){
                 <th scope="col">Recipe Name</th>
                 <th scope="col">Ingredients</th>
                 <th scope="col">Description</th>
-                <th scope="col">Action</th>
+                <th scope="col">Action </th>
               </tr>
             </thead> 
             <tbody>
