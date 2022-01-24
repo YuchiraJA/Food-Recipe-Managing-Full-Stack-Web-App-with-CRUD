@@ -43,6 +43,7 @@ export default class CreatePost extends Component {
           }
         )
       }
+      alert("New Recipe Save Successfully");
     })
   }
 

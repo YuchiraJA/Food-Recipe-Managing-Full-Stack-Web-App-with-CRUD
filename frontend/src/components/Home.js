@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 
 export default class Home extends Component {
@@ -29,6 +30,17 @@ retrievePosts(){
 }
 
 
+
+
+onDelete = (id) =>{
+  axios.delete(`/post/delete/${id}`).then((res) =>{
+    alert("Delete Successfully");
+    this.retrievePosts();
+  })
+}
+
+
+
   render() {
     return (
       <div className="container">
@@ -46,7 +58,7 @@ retrievePosts(){
                 <th scope="col">Ingredients</th>
                 <th scope="col">Description</th>
                 <th scope="col">Action </th>
-                
+
               </tr>
             </thead> 
             <tbody>
@@ -63,11 +75,14 @@ retrievePosts(){
                   <td>{posts.description}</td>
 
                   <td>
-                    <a className="btn btn-warning" href="#">
-                      <i className="fas fa-edit"></i>&nbsp;Edit
+                    {/* <a className="btn btn-warning">
+                      <i className="fas fa-edit"></i>&nbsp;<Link to={`/edit/${posts._id}`}>Edit</Link>
+                    </a> */}
+                     <a className="btn btn-warning" href={`/edit/${posts._id}`}>
+                     <i className="fas fa-edit"></i>&nbsp;Edit
                     </a>
                     &nbsp;
-                    <a className="btn btn-danger" href="#">
+                      <a className="btn btn-danger" href="#" onClick={() =>this.onDelete(posts._id)}>
                       <i className="fas fa-trash"></i>&nbsp;Delete
                     </a>
                   </td>
