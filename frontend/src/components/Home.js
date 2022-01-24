@@ -40,11 +40,13 @@ retrievePosts(){
         <table className="table">
             <thead>
               <tr>
+
                 <th scope="col">#</th>
                 <th scope="col">Recipe Name</th>
                 <th scope="col">Ingredients</th>
                 <th scope="col">Description</th>
                 <th scope="col">Action </th>
+                
               </tr>
             </thead> 
             <tbody>
@@ -56,6 +58,7 @@ retrievePosts(){
                           {posts.recipename}
                       </a>
                   </td>
+
                   <td>{posts.ingredients}</td>
                   <td>{posts.description}</td>
 
