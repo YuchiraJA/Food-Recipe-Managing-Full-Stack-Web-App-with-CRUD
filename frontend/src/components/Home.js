@@ -34,7 +34,7 @@ retrievePosts(){
       <div className="container">
         <br/>
         
-        <h3>&nbsp;All Food Recipes</h3>
+        <h4>&nbsp;All Food Recipes</h4>
         <br/>
         
         <table className="table">

@@ -8,7 +8,7 @@ export default class NavBar extends Component {
  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 
   
-   <a style={{alignContent:'center'}} className="navbar-brand" href="#"> 	&nbsp; Food Recipe Web App	&nbsp; </a>
+   <a style={{alignContent:'center'}} className="navbar-brand" href="/"><h3>&nbsp; Food Recipe Web App &nbsp;</h3> </a>
   <div className="collapse navbar-collapse" id="navbarText">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">     
