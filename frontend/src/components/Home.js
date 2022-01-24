@@ -32,7 +32,10 @@ retrievePosts(){
   render() {
     return (
       <div className="container">
-        <p>All Recipes</p>
+        <br/>
+        
+        <h3>&nbsp;All Food Recipes</h3>
+        <br/>
         
         <table className="table">
             <thead>

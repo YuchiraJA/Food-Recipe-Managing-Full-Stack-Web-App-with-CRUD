@@ -49,7 +49,6 @@ export default class CreatePost extends Component {
   render() {
     return (
         <div>
-            Create Post 
             <div className="col-md-8 mt-4 mx-auto">
               <h1 className="h3 mb-3 font-weight-normal">Add New Recipe</h1>
               <form className="needs-validation" noValidate>
@@ -88,7 +87,9 @@ export default class CreatePost extends Component {
                   onChange={this.handleInputChange}/>
                 </div>
 
-                <button className='btn btn-success' type='submit' style={{marginTop:'15px'}} onClick={this.onSubmit}>&nbsp; Save </button>
+                <button className='btn btn-success' type='submit' style={{marginTop:'15px'}} onClick={this.onSubmit}>
+                  <i className='far fa-check-square'></i>
+                  &nbsp; Save </button>
               </form>
             </div>
         </div>
