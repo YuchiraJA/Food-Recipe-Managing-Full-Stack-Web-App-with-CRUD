@@ -32,16 +32,21 @@ retrievePosts(){
   render() {
     return (
       <div className="container">
-        <p>All Recipes</p>
+        <br/>
+        
+        <h4>&nbsp;All Food Recipes</h4>
+        <br/>
         
         <table className="table">
             <thead>
               <tr>
+
                 <th scope="col">#</th>
                 <th scope="col">Recipe Name</th>
                 <th scope="col">Ingredients</th>
                 <th scope="col">Description</th>
-                <th scope="col">Action</th>
+                <th scope="col">Action </th>
+                
               </tr>
             </thead> 
             <tbody>
@@ -53,6 +58,7 @@ retrievePosts(){
                           {posts.recipename}
                       </a>
                   </td>
+
                   <td>{posts.ingredients}</td>
                   <td>{posts.description}</td>
 
