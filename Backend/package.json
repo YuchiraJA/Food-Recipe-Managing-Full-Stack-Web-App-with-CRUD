@@ -1,0 +1,29 @@
+{
+  "name": "mern-stack-crud-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuchiraJA/MERN-Stack-CRUD-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuchiraJA/MERN-Stack-CRUD-App/issues"
+  },
+  "homepage": "https://github.com/YuchiraJA/MERN-Stack-CRUD-App#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.6",
+    "nodemon": "^2.0.15"
+  }
+}
