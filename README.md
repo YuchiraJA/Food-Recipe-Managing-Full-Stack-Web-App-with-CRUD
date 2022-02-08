@@ -2,7 +2,7 @@
 
 ## Technologies used - 
 ######                   Frontend - ReatJS
-######                   Front end (Styling):Bootstrap 
+######                   Front end Styling:Bootstrap 
 ######                   Backend  - NodeJS, ExpressJS
 ######                   Database - MongoDB 
 
